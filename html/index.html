@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+
+<div id="header"></div>
+<div id="pinned"></div>
+
+<div id="feedWrapper">
+    <div id="feed"></div>
+</div>
+
+<div class="inputField">
+    <input type="text" id="inputText" placeholder="Введите сообщение" />
+    <div class="mediaInputButtons">
+        <img src="../img/upload.png" id="uploadMedia" alt="upload">
+        <img src="../img/recordAudio.png" id="recordAudio" alt="record audio">
+        <img src="../img/recordVideo.png" id="recordVideo" alt="record video">
+    </div>
+
+    <div class="recordController hidden">
+        <span class="iconOk">✓</span>
+        <span class="timer">00:00</span>
+        <span class="iconCancel">✖</span>
+    </div>
+</div>
+
+<div class="hidden" id="uploadMediaWindow">
+    <div class="actionContainer" id="fileUploader">
+        <input type="file" name="file" class="fileInput" id="mediaFileToUpload" />
+        <label for="mediaFileToUpload">Фото или видео</label>
+    </div>
+
+    <div class="actionContainer">
+        <div id="geolocationContainer">Геолокация</div>
+    </div>
+
+    <div class="actionContainer">
+        <div id="uploadMediaCancel">Отменить</div>
+    </div>
+</div>
+
+
+<div class="hidden" id="permissionsError">
+    <div class="title">
+        Необходимо выдать права или использовать другой браузер
+        <span id="permissionsErrorClose">✖</span>
+    </div>
+</div>
+
+</body>
+</html>
