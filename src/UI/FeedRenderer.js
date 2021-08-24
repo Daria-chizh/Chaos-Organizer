@@ -1,4 +1,5 @@
 import ItemRenderer from './ItemRenderer';
+import host from '../host';
 
 export default class FeedRenderer {
   constructor({ listeners, pinnedItem }) {
@@ -20,7 +21,7 @@ export default class FeedRenderer {
   static handleItemDownload(item, element) {
     const linkElement = document.createElement('a');
     linkElement.classList.add('link');
-    linkElement.setAttribute('href', `http://localhost:7777${item.content}?download=1`);
+    linkElement.setAttribute('href', `${host}${item.content}?download=1`);
     linkElement.setAttribute('download', item.content);
 
     const downloadButton = document.createElement('img');

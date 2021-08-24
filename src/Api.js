@@ -1,3 +1,5 @@
+import host from './host';
+
 export default class Api {
   static makeCall(options, cb) {
     const {
@@ -16,7 +18,6 @@ export default class Api {
       }
     });
 
-    const host = 'http://localhost:7777';
     const url = `${host}/${path}${qs ? `?${qs}` : ''}`;
 
     xhr.open(method, url);

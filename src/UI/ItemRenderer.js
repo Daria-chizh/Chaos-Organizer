@@ -1,3 +1,5 @@
+import host from '../host';
+
 export default class ItemRenderer {
   static renderItem(item) {
     switch (item.type) {
@@ -16,7 +18,7 @@ export default class ItemRenderer {
       case 'image': {
         const element = document.createElement('img');
         element.classList.add('imageContainer');
-        element.setAttribute('src', `http://localhost:7777${item.content}`);
+        element.setAttribute('src', `${host}${item.content}`);
         return element;
       }
       case 'geoposition': {
@@ -27,13 +29,13 @@ export default class ItemRenderer {
       case 'audio': {
         const element = document.createElement('audio');
         element.setAttribute('controls', '');
-        element.setAttribute('src', `http://localhost:7777${item.content}`);
+        element.setAttribute('src', `${host}${item.content}`);
         return element;
       }
       case 'video': {
         const element = document.createElement('video');
         element.setAttribute('controls', '');
-        element.setAttribute('src', `http://localhost:7777${item.content}`);
+        element.setAttribute('src', `${host}${item.content}`);
         return element;
       }
       case 'bot_reply': {
