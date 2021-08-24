@@ -1,5 +1,7 @@
 import ItemRenderer from './ItemRenderer';
 import host from '../host';
+import DownloadImage from '../../img/download.png';
+import PinImage from '../../img/pin.png';
 
 export default class FeedRenderer {
   constructor({ listeners, pinnedItem }) {
@@ -26,7 +28,7 @@ export default class FeedRenderer {
 
     const downloadButton = document.createElement('img');
     downloadButton.classList.add('download');
-    downloadButton.setAttribute('src', 'img/download.png');
+    downloadButton.setAttribute('src', DownloadImage);
     linkElement.appendChild(downloadButton);
 
     element.appendChild(linkElement);
@@ -37,7 +39,7 @@ export default class FeedRenderer {
     pinButtonContainer.classList.add('pinButton');
 
     const pinButton = document.createElement('img');
-    pinButton.setAttribute('src', 'img/pin.png');
+    pinButton.setAttribute('src', PinImage);
     pinButton.addEventListener('click', () => {
       if (this.listeners.onSetPinned) {
         this.listeners.onSetPinned(item, true);
