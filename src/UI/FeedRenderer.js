@@ -31,7 +31,7 @@ export default class FeedRenderer {
     downloadButton.setAttribute('src', DownloadImage);
     linkElement.appendChild(downloadButton);
 
-    element.appendChild(linkElement);
+    element.parentNode.appendChild(linkElement);
   }
 
   handleItemPin(item, element) {
