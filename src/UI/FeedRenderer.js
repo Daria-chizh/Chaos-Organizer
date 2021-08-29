@@ -71,6 +71,8 @@ export default class FeedRenderer {
 
       this.feedContainer.appendChild(itemContainer);
     }
+
+    this.feedWrapper.scrollTop = 0;
   }
 
   prependItem(item) {

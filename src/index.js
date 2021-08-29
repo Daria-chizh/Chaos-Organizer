@@ -11,7 +11,6 @@ import Api from './Api';
 let feed = null;
 let pinnedItem = null;
 let loading = false;
-let maxId = 0;
 
 const listeners = {
   onSetPinned: (item, pinned) => Api.setPinned(item.id, pinned, () => {
@@ -23,15 +22,14 @@ const listeners = {
       return;
     }
 
-    const fromId = Math.max(...feed.feed.map((item) => item.id));
-    if (maxId === fromId) {
+    const fromId = Math.min(...feed.feed.map((item) => item.id));
+    if (fromId <= 1) {
       return;
     }
 
     loading = true;
     Api.listMedia(fromId, (data) => {
       feed.appendItems(data.items);
-      maxId = data.maxId;
       loading = false;
     });
   },

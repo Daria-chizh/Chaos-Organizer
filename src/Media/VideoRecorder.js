@@ -23,7 +23,7 @@ export default class VideoRecorder {
 
     const currentVideo = document.createElement('video');
     currentVideo.classList.add('currentVideo');
-    containerForPreview.appendChild(currentVideo);
+    containerForPreview.insertBefore(currentVideo, containerForPreview.firstChild);
     currentVideo.setAttribute('autoplay', 'true');
     currentVideo.setAttribute('muted', '');
     currentVideo.srcObject = stream;
