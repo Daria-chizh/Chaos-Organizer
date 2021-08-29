@@ -1,0 +1,271 @@
+.inputField {
+  width: 100%;
+  height: 55px;
+  border: 1px solid darkgrey;
+  position: relative;
+  display: inline-flex;
+}
+
+#inputText {
+  width: 60%;
+  height: 30px;
+  border: 1px solid darkgrey;
+  border-radius: 15px;
+  margin: 10px 40px;
+}
+
+#uploadMedia {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  left: 25px;
+  top: 16px;
+  margin-left: -15px;
+}
+
+#recordAudio {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 60px;
+  top: 16px;
+  margin-right: -15px;
+}
+
+#recordVideo {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 25px;
+  top: 16px;
+  margin-right: -10px;
+}
+
+
+.recordController {
+  position: absolute;
+  right: 30px;
+  top: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.iconOk {
+  margin-right: 50px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  right: 30px;
+  text-align: center;
+}
+
+.timer {
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+.iconCancel {
+  border: 1px solid gray;
+  border-radius: 20px;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  right: -15px;
+}
+
+#uploadMediaWindow {
+  width: 20%;
+  height: 150px;
+  border: 1px solid darkgrey;
+  border-radius: 15px;
+  position: relative;
+  bottom: 120px;
+  background-color: white;
+}
+
+
+.actionContainer {
+  font-size: 20px;
+  text-align: center;
+  margin: 20px;
+}
+
+.fileInput {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+#permissionsErrorf {
+  border: 1px solid black;
+  width: 25%;
+  min-height: 60px;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.title {
+  font-size: 20px;
+  margin: 20px;
+  padding: 20px;
+}
+
+#permissionsErrorClose {
+  float: right;
+  margin: -30px;
+}
+
+.locationInputDialog {
+  border: 1px solid black;
+  width: 25%;
+  min-height: 340px;
+  border-radius: 15px;
+  margin: 20px;
+}
+
+.dialogTitle,
+.dialogContent {
+  font-size: 20px;
+  margin: 20px;
+}
+
+.locationInput {
+  width: 90%;
+  height: 40px;
+  margin: 10px 20px;
+}
+
+.dialogError {
+  color: red;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.dialogButtons {
+  float: right;
+  margin: 0 30px;
+  display: inline;
+}
+
+.dialogButtonCancel {
+  width: 100px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid gray;
+  margin-right: 10px;
+}
+
+.textContent {
+  margin-bottom: 30px;
+  font-size: 20px;
+  color: black;
+}
+
+.dialogButtonOk {
+  width: 60px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 15px;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+video {
+  width: 80%;
+}
+
+audio {
+  width: 80%;
+}
+
+#main {
+  width: 40%;
+}
+
+#feedWrapper {
+  min-height: 50vh;
+  border: 1px solid darkgrey;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.feedItem > span, .feedItem > a {
+  font-size: 20px;
+  position: relative;
+  padding-left: 10px;
+}
+
+.feedItem > a {
+  color: black;
+  text-decoration: none;
+}
+
+.feedItem > img {
+  width: 100%;
+}
+
+.feedItem > audio,
+.feedItem > video {
+  width: 80%;
+}
+
+#pinned {
+  position: relative;
+  border: 1px solid darkgray;
+}
+
+.closeButton {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: darkgray;
+}
+
+.feedItem {
+  margin: 20px 0;
+  position: relative;
+}
+
+.download {
+  width: 20px;
+  height: 20px;
+}
+
+.link {
+  display: none;
+}
+
+.feedItem:hover .link {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  right: 10px;
+  top: 20px;
+}
+
+.feedItem .pinButton {
+  display: none;
+}
+
+.feedItem:hover .pinButton {
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  top:0;
+}
+
+.feedItem .pinButton > img {
+  width: 16px;
+  height: 16px;
+}
